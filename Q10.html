@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Euler-10</title>
+</head>
+<body>
+<div>
+<input id="result" type="text" readonly>
+</div>
+<script>
+let result=0,max=2000000,sum=0;
+
+function isPrime(num) {
+  var sqrtnum=Math.floor(Math.sqrt(num));
+    var prime = num != 1;
+    for(var i=2; i<sqrtnum+1; i++) { // sqrtnum+1
+        if(num % i == 0) {
+            prime = false;
+            break;
+        }
+    }
+    return prime;
+}
+
+for(let a=2;a<max;++a){
+	if(isPrime(a)){
+		sum += a;
+	}
+}
+
+result = sum;
+document.getElementById("result").value = result;
+</script>
+</body>

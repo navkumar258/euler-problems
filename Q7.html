@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Euler-7</title>
+</head>
+<body>
+<div>
+<input id="result" type="text" readonly>
+</div>
+<script>
+var primes=[],result=0;
+
+function isPrime(num) {
+  var sqrtnum=Math.floor(Math.sqrt(num));
+    var prime = num != 1;
+    for(var i=2; i<sqrtnum+1; i++) { // sqrtnum+1
+        if(num % i == 0) {
+            prime = false;
+            break;
+        }
+    }
+    return prime;
+}
+
+for(var i=2;;i++){
+	if(isPrime(i)){
+		primes.push(i);
+		if(primes.length >= 10001){
+			result = i;
+			break;
+		}
+	}else{
+		continue;
+	}
+}
+
+document.getElementById("result").value = result;
+</script>
+</body>

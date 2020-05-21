@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Euler-4</title>
+</head>
+<body>
+<div>
+<input id="result" type="text" readonly>
+</div>
+<script>
+var result=-1;
+
+function isPalindrome(str) {
+    return str == str.split('').reverse().join('');
+}
+
+	for(var i=100;i<1000;i++){
+		for(var j=100;j<1000;j++){
+			var result1 = i*j;
+			if(isPalindrome(result1.toString()) && (result1 > result))
+			result = result1;
+		}
+	}
+document.getElementById("result").value = result;
+</script>
+</body>

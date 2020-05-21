@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Euler-6</title>
+</head>
+<body>
+<div>
+<input id="result" type="text" readonly>
+</div>
+<script>
+var sum=0,sumSquares=0,result = 0;
+
+for(var i=1;i<=100;i++){
+	sum += i;
+	sumSquares += i**2;
+}
+
+//console.log("sum: " + sum);
+result = (sum**2)-sumSquares;
+document.getElementById("result").value = result;
+</script>
+</body>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Euler-5</title>
+</head>
+<body>
+<div>
+<input id="result" type="text" readonly>
+</div>
+<script>
+var result=0;
+
+var isDivisible = function(n){
+	var count = 0;
+	for(var i=20;i>=2;i--){
+		if(n%i == 0){
+			count++;
+			if(count >= 19)
+				return true;
+		}else{
+			return false;
+		}
+	}
+}; 
+
+for(var i=2521;;i++){
+	if(isDivisible(i)){
+		result = i;
+		break;
+	}else{
+		continue;
+	}
+}
+
+document.getElementById("result").value = result;
+</script>
+</body>

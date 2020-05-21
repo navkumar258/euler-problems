@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Euler-9</title>
+</head>
+<body>
+<div>
+<input id="result" type="text" readonly>
+</div>
+<script>
+let result=0,max=1000;
+
+for(let a=1;a<max;a++){
+	for(let b=a+1;b<max;b++){
+		let c = max-a-b;
+		
+		if(a*a + b*b == c*c){
+			result = a*b*c;
+		}
+	}
+}
+
+document.getElementById("result").value = result;
+</script>
+</body>
